@@ -8,13 +8,18 @@ function calcPorcentaje() {
   );
 
   // Declaro las variables a utilizar dentro del switch.
+
   let producto;
   let total;
+  let telePlasma = 20000;
+  let laptopLenovo = 10000;
+  let tecladoNisuta = 5000;
 
   //declaro las const con el Dto que dan como resultado el valor en base a cada producto.
-  const DTO_A = 20000 * 0.5;
-  const DTO_B = 10000 * 0.3;
-  const DTO_C = 5000 * 0.1;
+
+  const DTO_A = telePlasma * 0.5;
+  const DTO_B = laptopLenovo * 0.3;
+  const DTO_C = tecladoNisuta * 0.1;
 
   //Aqui creo un bucle para que el usuario pueda elegir entre 1 o mas productos hasta que el mismo introdusca F para salir.
   while (producto !== "F") {
@@ -32,23 +37,23 @@ function calcPorcentaje() {
 
     producto = producto.toUpperCase();
 
-    //Inicia el bucle despues de que se verifico que el prompt no sea null y con el metodo toUpperCase me serciono que todo esta en mayusculas.
+    //Inicia el bucle despues de que se verifico que el prompt no sea null y con el metodo toUpperCase evito errores de inputs en minusculas.
 
     switch (producto) {
       case "A":
-        total = 20000 - DTO_A;
+        total = telePlasma - DTO_A;
         alert(
           `El precio con el descuento es de ${total} \n si desea salir escriba "F"`
         );
         break;
       case "B":
-        total = 10000 - DTO_B;
+        total = laptopLenovo - DTO_B;
         alert(
           `El precio con el descuento es de ${total} \n si desea salir escriba "F"`
         );
         break;
       case "C":
-        total = 5000 - DTO_C;
+        total = tecladoNisuta - DTO_C;
         alert(
           `El precio con el descuento es de ${total} \n si desea salir escriba "F"`
         );
