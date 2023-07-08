@@ -74,3 +74,35 @@ main .titulo-web {
   padding: 1rem;
   border-radius: 0.7rem;
 }
+
+@media (max-width: 520px) {
+  .container-header .titulo-sitio {
+    font-size: 1rem;
+  }
+
+  .header-ul .header-li {
+    font-size: 0.7rem;
+  }
+
+  .titulo-web {
+    text-align: center;
+  }
+
+  .productos-main .productos {
+    flex-wrap: wrap;
+    margin: 0;
+    justify-content: center;
+  }
+
+  .productos .producto1 img,
+  .producto2 img,
+  .producto3 img {
+    width: 50%;
+  }
+
+  .productos .producto1 h2,
+  .producto2 h2,
+  .producto3 h2 {
+    font-size: 1rem;
+  }
+}
