@@ -55,4 +55,4 @@ function calcPorcentaje() {
   }
 }
 
-setTimeout(calcPorcentaje, 5000);
+setTimeout(calcPorcentaje, 4000);
