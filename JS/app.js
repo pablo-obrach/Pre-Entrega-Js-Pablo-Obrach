@@ -1,9 +1,9 @@
 function calcPorcentaje() {
   alert(
     "Elija un producto usando su letra correspondiente de la siguiente lista para saber el precio con el Dto de la semana: " +
-      "\nA-Telvisor Plasma: $20.000 (tiene un 50% dto)" +
-      "\nB-Lapto Lenovo: $10.000 (tiene un 30% dto)" +
-      "\nC-Teclado Mecanico Nisuta: $5.000 (tiene un 10% dto)" +
+      "\nA- Telvisor Plasma: $20.000 (tiene un 50% dto)" +
+      "\nB- Lapto Lenovo: $10.000 (tiene un 30% dto)" +
+      "\nC- Teclado Mecanico Nisuta: $5.000 (tiene un 10% dto)" +
       "\nIngrese 'F' para finalizar."
   );
 
@@ -24,11 +24,12 @@ function calcPorcentaje() {
   //Aqui creo un bucle para que el usuario pueda elegir entre 1 o mas productos hasta que el mismo introdusca F para salir.
   while (producto !== "F") {
     producto = prompt(
-      "Cual producto desea? (escoja la letra correspondiente al producto)"
+      `Cual producto desea? Escoja la letra correspondiente: \nA- Tele Plasma Samsung \nB- Laptop Lenovo \nC- Teclado Mecanico Nisuta \n si desea salir escriba 'F' o puede oprimir el boton cancelar.`
     );
 
     //Aqui uso un condicional por si el usuario cancela el prompt.
     if (producto === null) {
+      alert("Gracias por utilizar nuestros servicios, hasta la proxima!");
       break;
     }
 
@@ -43,19 +44,19 @@ function calcPorcentaje() {
       case "A":
         total = telePlasma - DTO_A;
         alert(
-          `El precio con el descuento es de ${total} \n si desea salir escriba "F"`
+          `El precio con el descuento es de $${total}. \nEsperamos su compra ¡gracias por elegirnos!`
         );
         break;
       case "B":
         total = laptopLenovo - DTO_B;
         alert(
-          `El precio con el descuento es de ${total} \n si desea salir escriba "F"`
+          `El precio con el descuento es de $${total}. \nEsperamos su compra ¡gracias por elegirnos!`
         );
         break;
       case "C":
         total = tecladoNisuta - DTO_C;
         alert(
-          `El precio con el descuento es de ${total} \n si desea salir escriba "F"`
+          `El precio con el descuento es de $${total}. \nEsperamos su compra ¡gracias por elegirnos!`
         );
         break;
       case "F":
@@ -64,7 +65,7 @@ function calcPorcentaje() {
         break;
       default:
         alert(
-          "El dato ingresado es incorrecto, ingrese la letra correspondiente al producto deseado"
+          `El dato ingresado es incorrecto, ingrese la letra correspondiente al producto deseado.`
           // Declaro un default para cualquier caso que no sea el correspondiente
         );
         break;
