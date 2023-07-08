@@ -7,52 +7,65 @@ function calcPorcentaje() {
       "\nIngrese 'F' para finalizar."
   );
 
+  // Declaro las variables a utilizar dentro del switch.
   let producto;
   let total;
+
+  //declaro las const con el Dto que dan como resultado el valor en base a cada producto.
   const DTO_A = 20000 * 0.5;
   const DTO_B = 10000 * 0.3;
   const DTO_C = 5000 * 0.1;
 
+  //Aqui creo un bucle para que el usuario pueda elegir entre 1 o mas productos hasta que el mismo introdusca F para salir.
   while (producto !== "F") {
     producto = prompt(
       "Cual producto desea? (escoja la letra correspondiente al producto)"
     );
 
+    //Aqui uso un condicional por si el usuario cancela el prompt.
     if (producto === null) {
       break;
     }
 
+    /*luego para que no haya errores(ya que me tiraba error cuando usababa el metodo toUpperCase dentro del prompt) 
+    llamo a producto y le aplico el metodo correspondiente. */
+
     producto = producto.toUpperCase();
+
+    //Inicia el bucle despues de que se verifico que el prompt no sea null y con el metodo toUpperCase me serciono que todo esta en mayusculas.
 
     switch (producto) {
       case "A":
-        total = 20000 - DTO_A; // Descuento del 50% para A
+        total = 20000 - DTO_A;
         alert(
           `El precio con el descuento es de ${total} \n si desea salir escriba "F"`
         );
         break;
       case "B":
-        total = 10000 - DTO_B; // Descuento del 30% para B
+        total = 10000 - DTO_B;
         alert(
           `El precio con el descuento es de ${total} \n si desea salir escriba "F"`
         );
         break;
       case "C":
-        total = 5000 - DTO_C; // Descuento del 10% para C
+        total = 5000 - DTO_C;
         alert(
           `El precio con el descuento es de ${total} \n si desea salir escriba "F"`
         );
         break;
       case "F":
         alert("Gracias por utilizar nuestros servicios, hasta la proxima!");
+        // Declaro un mensaje de salida para el usuario.
         break;
       default:
         alert(
           "El dato ingresado es incorrecto, ingrese la letra correspondiente al producto deseado"
+          // Declaro un default para cualquier caso que no sea el correspondiente
         );
         break;
     }
   }
 }
 
+// Utilizo el metodo setTimeout para cargar el sitio (se que no lo pidieron pero me parecio mas correcto hacerlo de esta manera)
 setTimeout(calcPorcentaje, 4000);
